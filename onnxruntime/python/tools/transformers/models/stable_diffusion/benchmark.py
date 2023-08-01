@@ -286,7 +286,7 @@ def run_ort_pipeline(
             inference_end = time.time()
             latency = inference_end - inference_start
             latency_list.append(latency)
-            print(f"Inference took {latency:.3f} seconds")
+            print(f"Inference took {latency:.3f} seconds. (inference_start: {inference_start:.3f} inference_end: {inference_end:.3f})")
             for k, image in enumerate(images):
                 image.save(f"{image_filename_prefix}_{i}_{j}_{k}.jpg")
 
